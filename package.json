@@ -1,5 +1,5 @@
 {
-  "homepage" : "https://zengo-x.github.io/walletconnect-tokenproof-test/",
+  "homepage": "https://walletconnect.org",
   "name": "walletconnect-example-dapp",
   "version": "1.7.1",
   "private": true,
@@ -10,11 +10,10 @@
     "crypto"
   ],
   "author": "WalletConnect, Inc. <walletconnect.com>",
-  "homepage": "https://walletconnect.org",
   "license": "MIT",
   "scripts": {
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
@@ -23,10 +22,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/walletconnect/walletconnect-example-dapp.git"
+    "url": "git+https://github.com/ZenGo-X/walletconnect-tokenproof-test.git"
   },
   "bugs": {
-    "url": "https://github.com/walletconnect/walletconnect-example-dapp/issues"
+    "url": "https://github.com/walletconnect/walletconnect-tokenproof-dapp/issues"
   },
   "dependencies": {
     "@types/eth-sig-util": "^2.1.1",
@@ -38,6 +37,7 @@
     "eth-sig-util": "^2.5.3",
     "ethereumjs-util": "^7.0.6",
     "ethers": "^5.0.17",
+    "gh-pages": "^4.0.0",
     "node-gyp": "^8.1.0",
     "prop-types": "^15.7.2",
     "qr-image": "^3.2.0",
