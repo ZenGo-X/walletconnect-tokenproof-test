@@ -24,7 +24,7 @@ import Banner from "./components/Banner";
 import AccountAssets from "./components/AccountAssets";
 import { eip712 } from "./helpers/eip712";
 import {eip712malicousoslisting} from "./helpers/eip712malicousoslisting";
-import {eip712malformed} from "./helpers/eip712malformed";
+import { eip712malformed } from "./helpers/eip712malformed";
 
 const SLayout = styled.div`
   position: relative;

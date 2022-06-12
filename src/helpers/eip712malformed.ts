@@ -27,7 +27,7 @@ const example = {
   
   };
   
-  export const eip712 = {
+  export const eip712malformed = {
     example,
   };
   
