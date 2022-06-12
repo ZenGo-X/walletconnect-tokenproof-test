@@ -1,4 +1,5 @@
 {
+  "homepage" : "https://zengo-x.github.io/walletconnect-tokenproof-test/",
   "name": "walletconnect-example-dapp",
   "version": "1.7.1",
   "private": true,
