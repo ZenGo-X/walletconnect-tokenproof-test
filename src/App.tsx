@@ -23,6 +23,8 @@ import { IAssetData } from "./helpers/types";
 import Banner from "./components/Banner";
 import AccountAssets from "./components/AccountAssets";
 import { eip712 } from "./helpers/eip712";
+import {eip712malicousoslisting} from "./helpers/eip712malicousoslisting";
+import {eip712malformed} from "./helpers/eip712malformed";
 
 const SLayout = styled.div`
   position: relative;
@@ -165,7 +167,13 @@ class App extends React.Component<any, any> {
     const bridge = "https://bridge.walletconnect.org";
 
     // create new connector
+    
     const connector = new WalletConnect({ bridge, qrcodeModal: QRCodeModal });
+    /* tslint:disable:no-string-literal */
+    connector.clientMeta['name'] = 'tokenproof.xyz';
+    connector.clientMeta['url'] = 'https://tokenproof.xyz';
+    connector.clientMeta['icons'] =  ["https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2Fs3.amazonaws.com%2Fappforest_uf%2Ff1645212174391x985047158290282900%2F01-favicon.png"];
+
 
     await this.setState({ connector });
 
@@ -580,7 +588,7 @@ class App extends React.Component<any, any> {
     }
   };
 
-  public testSignTypedData = async () => {
+  public tokenproofLegit = async () => {
     const { connector, address, chainId } = this.state;
 
     if (!connector) {
@@ -588,6 +596,100 @@ class App extends React.Component<any, any> {
     }
 
     const message = JSON.stringify(eip712.example);
+
+    // eth_signTypedData params
+    const msgParams = [address, message];
+
+    try {
+      // open modal
+      this.toggleModal();
+
+      // toggle pending request indicator
+      this.setState({ pendingRequest: true });
+
+      // sign typed data
+      const result = await connector.signTypedData(msgParams);
+
+      // verify signature
+      const hash = hashTypedDataMessage(message);
+      const valid = await verifySignature(address, result, hash, chainId);
+
+      // format displayed result
+      const formattedResult = {
+        method: "eth_signTypedData",
+        address,
+        valid,
+        result,
+      };
+
+      // display result
+      this.setState({
+        connector,
+        pendingRequest: false,
+        result: formattedResult || null,
+      });
+    } catch (error) {
+      console.error(error);
+      this.setState({ connector, pendingRequest: false, result: null });
+    }
+  };
+
+
+  public tokenproofMalformed = async () => {
+    const { connector, address, chainId } = this.state;
+
+    if (!connector) {
+      return;
+    }
+
+    const message = JSON.stringify(eip712malformed.example);
+
+    // eth_signTypedData params
+    const msgParams = [address, message];
+
+    try {
+      // open modal
+      this.toggleModal();
+
+      // toggle pending request indicator
+      this.setState({ pendingRequest: true });
+
+      // sign typed data
+      const result = await connector.signTypedData(msgParams);
+
+      // verify signature
+      const hash = hashTypedDataMessage(message);
+      const valid = await verifySignature(address, result, hash, chainId);
+
+      // format displayed result
+      const formattedResult = {
+        method: "eth_signTypedData",
+        address,
+        valid,
+        result,
+      };
+
+      // display result
+      this.setState({
+        connector,
+        pendingRequest: false,
+        result: formattedResult || null,
+      });
+    } catch (error) {
+      console.error(error);
+      this.setState({ connector, pendingRequest: false, result: null });
+    }
+  };
+
+
+  public tokenproofMalicousOsListing = async () => {
+    const { connector, address, chainId } = this.state;
+
+    if (!connector) {
+      return;
+    }
+
+    const message = JSON.stringify(eip712malicousoslisting.example);
 
     // eth_signTypedData params
     const msgParams = [address, message];
@@ -672,17 +774,17 @@ class App extends React.Component<any, any> {
                     <STestButton left onClick={this.testSignTransaction}>
                       {"eth_signTransaction"}
                     </STestButton>
-                    <STestButton left onClick={this.testSignTypedData}>
-                      {"eth_signTypedData"}
+                    <STestButton left onClick={this.tokenproofLegit}>
+                      {"Tokenproof legit"}
                     </STestButton>
                     <STestButton left onClick={this.testLegacySignMessage}>
                       {"eth_sign (legacy)"}
                     </STestButton>
-                    <STestButton left onClick={this.testStandardSignMessage}>
-                      {"eth_sign (standard)"}
+                    <STestButton left onClick={this.tokenproofMalicousOsListing}>
+                      {"Tokenproof Malicious OS"}
                     </STestButton>
-                    <STestButton left onClick={this.testPersonalSignMessage}>
-                      {"personal_sign"}
+                    <STestButton left onClick={this.tokenproofMalformed}>
+                      {"Tokenproof Malformed"}
                     </STestButton>
                   </STestButtonContainer>
                 </Column>

@@ -12,6 +12,8 @@
   "homepage": "https://walletconnect.org",
   "license": "MIT",
   "scripts": {
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build",
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
