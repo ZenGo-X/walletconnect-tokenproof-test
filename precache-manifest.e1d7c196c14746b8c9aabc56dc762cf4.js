@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/walletconnect-tokenproof-test/static/media/xdai.e37299a8.png"
   },
   {
-    "revision": "7c1a7f47b8063e62f00ddc3ada0ac7d2",
+    "revision": "bc19878255de5f225b92043d1d2ff425",
     "url": "/walletconnect-tokenproof-test/index.html"
   }
 ];
