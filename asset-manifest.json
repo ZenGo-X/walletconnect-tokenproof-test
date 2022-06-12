@@ -1,15 +1,15 @@
 {
-  "main.js": "/static/js/main.54a95c35.chunk.js",
-  "main.js.map": "/static/js/main.54a95c35.chunk.js.map",
-  "static/js/1.0eafecc3.chunk.js": "/static/js/1.0eafecc3.chunk.js",
-  "static/js/1.0eafecc3.chunk.js.map": "/static/js/1.0eafecc3.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
-  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
-  "static/media/walletconnect-banner.png": "/static/media/walletconnect-banner.e1cb8d21.png",
-  "static/media/erc20.svg": "/static/media/erc20.90607899.svg",
-  "static/media/eth.svg": "/static/media/eth.42bca731.svg",
-  "static/media/xdai.png": "/static/media/xdai.e37299a8.png",
-  "index.html": "/index.html",
-  "precache-manifest.655a85c5c39e133c558ed3688d1a843c.js": "/precache-manifest.655a85c5c39e133c558ed3688d1a843c.js",
-  "service-worker.js": "/service-worker.js"
+  "main.js": "/walletconnect-tokenproof-test/static/js/main.19be4a00.chunk.js",
+  "main.js.map": "/walletconnect-tokenproof-test/static/js/main.19be4a00.chunk.js.map",
+  "static/js/1.8c800943.chunk.js": "/walletconnect-tokenproof-test/static/js/1.8c800943.chunk.js",
+  "static/js/1.8c800943.chunk.js.map": "/walletconnect-tokenproof-test/static/js/1.8c800943.chunk.js.map",
+  "runtime~main.js": "/walletconnect-tokenproof-test/static/js/runtime~main.69cd8f12.js",
+  "runtime~main.js.map": "/walletconnect-tokenproof-test/static/js/runtime~main.69cd8f12.js.map",
+  "static/media/walletconnect-banner.png": "/walletconnect-tokenproof-test/static/media/walletconnect-banner.e1cb8d21.png",
+  "static/media/erc20.svg": "/walletconnect-tokenproof-test/static/media/erc20.90607899.svg",
+  "static/media/eth.svg": "/walletconnect-tokenproof-test/static/media/eth.42bca731.svg",
+  "static/media/xdai.png": "/walletconnect-tokenproof-test/static/media/xdai.e37299a8.png",
+  "index.html": "/walletconnect-tokenproof-test/index.html",
+  "precache-manifest.22124f1baa3559179d2c65a78bb2a09e.js": "/walletconnect-tokenproof-test/precache-manifest.22124f1baa3559179d2c65a78bb2a09e.js",
+  "service-worker.js": "/walletconnect-tokenproof-test/service-worker.js"
 }
