@@ -15,7 +15,7 @@ importScripts("/walletconnect-tokenproof-test/workbox-v3.6.3/workbox-sw.js");
 workbox.setConfig({modulePathPrefix: "/walletconnect-tokenproof-test/workbox-v3.6.3"});
 
 importScripts(
-  "/walletconnect-tokenproof-test/precache-manifest.e33bf5cad4e17aa2000afaee0a803c4f.js"
+  "/walletconnect-tokenproof-test/precache-manifest.4b4f2b53a9f31a7e78a2c124c391d21f.js"
 );
 
 workbox.clientsClaim();
