@@ -1,6 +1,6 @@
 {
-  "main.js": "/walletconnect-tokenproof-test/static/js/main.2eba9b70.chunk.js",
-  "main.js.map": "/walletconnect-tokenproof-test/static/js/main.2eba9b70.chunk.js.map",
+  "main.js": "/walletconnect-tokenproof-test/static/js/main.5f4a833f.chunk.js",
+  "main.js.map": "/walletconnect-tokenproof-test/static/js/main.5f4a833f.chunk.js.map",
   "static/js/1.8c800943.chunk.js": "/walletconnect-tokenproof-test/static/js/1.8c800943.chunk.js",
   "static/js/1.8c800943.chunk.js.map": "/walletconnect-tokenproof-test/static/js/1.8c800943.chunk.js.map",
   "runtime~main.js": "/walletconnect-tokenproof-test/static/js/runtime~main.69cd8f12.js",
@@ -10,6 +10,6 @@
   "static/media/eth.svg": "/walletconnect-tokenproof-test/static/media/eth.42bca731.svg",
   "static/media/xdai.png": "/walletconnect-tokenproof-test/static/media/xdai.e37299a8.png",
   "index.html": "/walletconnect-tokenproof-test/index.html",
-  "precache-manifest.6634cff6e317e378ec925d87bdf18f4f.js": "/walletconnect-tokenproof-test/precache-manifest.6634cff6e317e378ec925d87bdf18f4f.js",
+  "precache-manifest.5dcb291b01cd43854b63c92f0178786d.js": "/walletconnect-tokenproof-test/precache-manifest.5dcb291b01cd43854b63c92f0178786d.js",
   "service-worker.js": "/walletconnect-tokenproof-test/service-worker.js"
 }
