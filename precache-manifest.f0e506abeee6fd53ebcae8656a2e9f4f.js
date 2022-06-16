@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "5f4a833f9d8093877269",
-    "url": "/walletconnect-tokenproof-test/static/js/main.5f4a833f.chunk.js"
+    "revision": "18ef171c318c3f110e7d",
+    "url": "/walletconnect-tokenproof-test/static/js/main.18ef171c.chunk.js"
   },
   {
     "revision": "8c8009438691461c251e",
@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/walletconnect-tokenproof-test/static/media/xdai.e37299a8.png"
   },
   {
-    "revision": "3665096963a253bf19552ca0e8a0b9f2",
+    "revision": "cf7ff1a05d0bea08291ef49f4d5a063a",
     "url": "/walletconnect-tokenproof-test/index.html"
   }
 ];
