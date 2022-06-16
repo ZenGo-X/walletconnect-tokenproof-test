@@ -4,7 +4,7 @@ import WalletConnect from "@walletconnect/client";
 import QRCodeModal from "@walletconnect/qrcode-modal";
 import { convertUtf8ToHex } from "@walletconnect/utils";
 import { IInternalEvent } from "@walletconnect/types";
-import Button from "./components/Button";
+import {Button, RedButton} from "./components/Button";
 import Column from "./components/Column";
 import Wrapper from "./components/Wrapper";
 import Modal from "./components/Modal";
@@ -120,6 +120,15 @@ const STestButtonContainer = styled.div`
   flex-wrap: wrap;
 `;
 
+const STestRedButton = styled(RedButton as any)`
+  border-radius: 8px;
+  font-size: ${fonts.size.medium};
+  height: 44px;
+  width: 100%;
+  max-width: 175px;
+  margin: 12px;
+`;
+
 const STestButton = styled(Button as any)`
   border-radius: 8px;
   font-size: ${fonts.size.medium};
@@ -127,6 +136,7 @@ const STestButton = styled(Button as any)`
   width: 100%;
   max-width: 175px;
   margin: 12px;
+  color: myRed;
 `;
 
 interface IAppState {
@@ -752,7 +762,7 @@ class App extends React.Component<any, any> {
             {!address && !assets.length ? (
               <SLanding center>
                 <h3>
-                  {`Try out WalletConnect`}
+                  {`TokenSpoof Demo`}
                   <br />
                   <span>{`v${process.env.REACT_APP_VERSION}`}</span>
                 </h3>
@@ -765,26 +775,20 @@ class App extends React.Component<any, any> {
             ) : (
               <SBalances>
                 <Banner />
-                <h3>Actions</h3>
+                <h3>TokenSpoof Demo</h3>
                 <Column center>
                   <STestButtonContainer>
-                    <STestButton left onClick={this.testSendTransaction}>
-                      {"eth_sendTransaction"}
-                    </STestButton>
-                    <STestButton left onClick={this.testSignTransaction}>
-                      {"eth_signTransaction"}
-                    </STestButton>
+                    <STestRedButton left onClick={this.testSendTransaction}>
+                      {"Steal your funds"}
+                    </STestRedButton>
+                    <STestRedButton left onClick={this.tokenproofMalicousOsListing}>
+                      {"Free NFT Listing"}
+                    </STestRedButton>
+                    <STestRedButton left onClick={this.tokenproofMalformed}>
+                      {"TokenSpoof Malformed"}
+                    </STestRedButton>
                     <STestButton left onClick={this.tokenproofLegit}>
                       {"Tokenproof legit"}
-                    </STestButton>
-                    <STestButton left onClick={this.testLegacySignMessage}>
-                      {"eth_sign (legacy)"}
-                    </STestButton>
-                    <STestButton left onClick={this.tokenproofMalicousOsListing}>
-                      {"Tokenproof Malicious OS"}
-                    </STestButton>
-                    <STestButton left onClick={this.tokenproofMalformed}>
-                      {"Tokenproof Malformed"}
                     </STestButton>
                   </STestButtonContainer>
                 </Column>

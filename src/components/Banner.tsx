@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import banner from "../assets/walletconnect-banner.png";
+import banner from "../assets/tokenproof-banner.png";
 
 const SBannerWrapper = styled.div`
   display: flex;

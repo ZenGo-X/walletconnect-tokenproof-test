@@ -125,4 +125,37 @@ Button.defaultProps = {
   left: false,
 };
 
-export default Button;
+
+
+
+
+
+
+const RedButton = (props: IButtonProps) => (
+  <SButton
+    {...props}
+    type={props.type}
+    outline={props.outline}
+    color={props.color}
+    disabled={props.disabled}
+    icon={props.icon}
+    left={props.left}
+  >
+    <SHoverLayer />
+    <SIcon />
+    {props.fetching ? <Loader size={20} color="white" /> : props.children}
+  </SButton>
+);
+
+RedButton.defaultProps = {
+  fetching: false,
+  outline: false,
+  type: "button",
+  color: "red",
+  disabled: false,
+  icon: null,
+  left: false,
+};
+export  {Button, RedButton};
+
+
