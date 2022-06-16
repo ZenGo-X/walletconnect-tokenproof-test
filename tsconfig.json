@@ -19,7 +19,7 @@
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "resolveJsonModule": true,
     "types": ["react", "jest"]
   },

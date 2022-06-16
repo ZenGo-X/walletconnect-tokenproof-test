@@ -15,7 +15,7 @@ const example = {
   domain: {
     name: "tokenproof",
     version: "7",
-    chainId: "4",
+    chainId: "1",
     verifyingContract: "0xcccccccccccccccccccccccccccccccccccccccc"
   },
   primaryType: "Message",

@@ -129,6 +129,7 @@ const STestRedButton = styled(RedButton as any)`
   margin: 12px;
 `;
 
+/* tslint:disable:no-unused-variable */
 const STestButton = styled(Button as any)`
   border-radius: 8px;
   font-size: ${fonts.size.medium};
@@ -784,12 +785,6 @@ class App extends React.Component<any, any> {
                     <STestRedButton left onClick={this.tokenproofMalicousOsListing}>
                       {"Free NFT Listing"}
                     </STestRedButton>
-                    <STestRedButton left onClick={this.tokenproofMalformed}>
-                      {"TokenSpoof Malformed"}
-                    </STestRedButton>
-                    <STestButton left onClick={this.tokenproofLegit}>
-                      {"Tokenproof legit"}
-                    </STestButton>
                   </STestButtonContainer>
                 </Column>
                 <h3>Balances</h3>
